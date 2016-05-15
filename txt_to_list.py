@@ -1,4 +1,4 @@
-
+import string
 
 specials = (',', '.', '!', '?', '"', "'", ':', ';', '(', ')', '*', '-')
 
@@ -16,22 +16,9 @@ def txt_to_list(file):
 
     unique_words = list()
     for line in file:                # TODO fix this
+        line = line.translate(string.punctuation)
         words = line.split()
-        for word in words:          # TODO rewrite using regexp
-            if word in specials:
-                continue
-            for i in range(5):
-                try:
-                    if word[-1] in specials:
-                        word = word[:-1]
-                except IndexError:
-                    continue
-            for i in range(3):
-                try:
-                    if word[0] in specials:
-                        word = word[1:]
-                except:
-                    continue
+        for word in words:
             word = word.lower()
             unique_words.append(word)
     file.close()
