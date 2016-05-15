@@ -1,4 +1,4 @@
-import string
+import re
 
 specials = (',', '.', '!', '?', '"', "'", ':', ';', '(', ')', '*', '-')
 
@@ -16,7 +16,7 @@ def txt_to_list(file):
 
     unique_words = list()
     for line in file:                # TODO fix this
-        line = line.translate(string.punctuation)
+        line = re.sub(r'[^\w\s]', '', line)
         words = line.split()
         for word in words:
             word = word.lower()
