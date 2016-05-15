@@ -7,7 +7,7 @@ def txt_to_list(file):
     """Iterate through the words of .txt file and add them to the list.
 
     Arg:
-        A name of UTF-8 text document.
+        UTF-8 text document.
 
     Return:
         A list of string containing the unique words from
