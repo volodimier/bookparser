@@ -1,7 +1,5 @@
 import re
 
-specials = (',', '.', '!', '?', '"', "'", ':', ';', '(', ')', '*', '-')
-
 
 def txt_to_list(file):
     """Iterate through the words of .txt file and add them to the list.
