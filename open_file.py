@@ -1,12 +1,11 @@
 import sys
 
 
-# TODO добавить открытие файла
 def get_file_name():
     """Get filename from user.
 
     Return:
-        String variable.
+        TextIOWrapper
     """
     try:
         filename = sys.argv[1]

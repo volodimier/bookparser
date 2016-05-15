@@ -7,7 +7,7 @@ def txt_to_list(file):
     """Iterate through the words of .txt file and add them to the list.
 
     Arg:
-        UTF-8 text document.
+        TextIOWrapper
 
     Return:
         A list of string containing the unique words from
@@ -15,7 +15,7 @@ def txt_to_list(file):
     """
 
     unique_words = list()
-    for line in file:                # TODO fix this
+    for line in file:
         line = re.sub(r'[^\w\s]', '', line)
         words = line.split()
         for word in words:
