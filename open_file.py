@@ -9,7 +9,7 @@ def get_file_name():
     """
     try:
         filename = sys.argv[1]
-    except:                                     # fix(too broad)
+    except:                                     # TODO fix
         filename = input("Enter file name: ")
         if len(filename) < 1:
             filename = 'ipsum.txt'

@@ -1,8 +1,12 @@
 import sqlite3
+import sys
 
 
 def dict_to_db(dict_of_words):
     # TODO Добавить проверку (Add Try-Exception)
+
+    bd_name = sys.argv[2]
+
     conn = sqlite3.connect('myWordsDB.sqlite')
     cur = conn.cursor()
     cur.executescript('''
