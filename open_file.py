@@ -12,7 +12,7 @@ def get_file_name():
 
     try:
         filename = sys.argv[1]
-    except IndexError:                                     # TODO fix
+    except IndexError:
         filename = input("Enter file name: ")
         if len(filename) < 1:
             filename = 'ipsum.txt'

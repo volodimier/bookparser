@@ -3,11 +3,12 @@ import sys
 
 
 def dict_to_db(dict_of_words):
-    # TODO Добавить проверку (Add Try-Exception)
+    try:
+        bd_name = sys.argv[2]
+    except IndexError:
+        bd_name = 'myWordsDB.sqlite'
 
-    bd_name = sys.argv[2]
-
-    conn = sqlite3.connect('myWordsDB.sqlite')
+    conn = sqlite3.connect(bd_name)
     cur = conn.cursor()
     cur.executescript('''
     CREATE TABLE IF NOT EXISTS Words (
