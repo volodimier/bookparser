@@ -7,9 +7,12 @@ def get_file_name():
     Return:
         TextIOWrapper
     """
+
+    # TODO add with as
+
     try:
         filename = sys.argv[1]
-    except:                                     # fix(too broad)
+    except IndexError:                                     # TODO fix
         filename = input("Enter file name: ")
         if len(filename) < 1:
             filename = 'ipsum.txt'
